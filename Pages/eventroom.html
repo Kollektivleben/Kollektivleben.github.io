@@ -12,8 +12,8 @@
     </head>
     <body>
 		<div id="waiting">
-			<p>10 - 12 Uhr: First Event</p>
-			<p>20 - 22 Uhr: Second Event</p>
+			<p id="firstevent">10 - 12 Uhr: First Event</p>
+			<p id="secondevent">20 - 22 Uhr: Second Event</p>
 		</div>
 		<iframe id="video" style="display: none;" width="100%" height="100%" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 		<script>
@@ -23,10 +23,14 @@
 			
 			// set times
 			var now = new Date();
-			var firstEventStart = new Date("05/04/2021 06:15:00 GMT+02");
-			var firstEventEnd = new Date("05/04/2021 06:16:00 GMT+02");
-			var secondEventStart = new Date("05/04/2021 06:17:00 GMT+02");
-			var secondEventEnd = new Date("05/04/2021 06:18:00 GMT+02");
+			var firstEventStart = new Date("05/04/2021 06:50:00 GMT+02");
+			var firstEventEnd = new Date("05/04/2021 07:00:00 GMT+02");
+			var secondEventStart = new Date("05/04/2021 07:10:00 GMT+02");
+			var secondEventEnd = new Date("05/04/2021 08:00:00 GMT+02");
+			
+			// set waiting text
+			document.getElementById("firstevent").innerHTML = "First Event: " + firstEventStart.getHours() + ":" + firstEventStart.getMinutes() + " - " + firstEventStart.getHours() + ":" + firstEventStart.getMinutes();
+			document.getElementById("secondevent").innerHTML = "Second Event: " + secondEventStart.getHours() + ":" + secondEventStart.getMinutes() + " - " + secondEventEnd.getHours() + ":" + secondEventEnd.getMinutes();
 			
 			// set iframe source on events
 			if( now >= firstEventStart && now < firstEventEnd ) {
