@@ -29,16 +29,16 @@
 			
 			// set times
 			var now = new Date();
-			var firstEventStart = new Date("05/04/2021 07:20:00 GMT+02");
-			var firstEventEnd = new Date("05/04/2021 07:25:00 GMT+02");
+			var firstEventStart = new Date("05/04/2021 07:23:00 GMT+02");
+			var firstEventEnd = new Date("05/04/2021 07:27:00 GMT+02");
 			var secondEventStart = new Date("05/04/2021 07:30:00 GMT+02");
-			var secondEventEnd = new Date("05/04/2021 07:35:00 GMT+02");
+			var secondEventEnd = new Date("05/04/2021 07:33:00 GMT+02");
 			
 			// set waiting text
-			document.getElementById("firsteventstart").innerHTML = firstEventStart.getHours()
-			document.getElementById("firsteventend").innerHTML = String(firstEventEnd.getHours()).padStart(2, 0)
-			document.getElementById("secondeventstart").innerHTML = secondEventStart.getHours()
-			document.getElementById("secondeventend").innerHTML = String(secondEventEnd.getHours()).padStart(2, 0)
+			document.getElementById("firsteventstart").innerHTML = firstEventStart.getHours() + ":" + String(firstEventStart.getMinutes()).padStart(2, 0)
+			document.getElementById("firsteventend").innerHTML = firstEventEnd.getHours() + ":" + String(firstEventEnd.getMinutes()).padStart(2, 0)
+			document.getElementById("secondeventstart").innerHTML = secondEventStart.getHours() + ":" + String(secondEventStart.getMinutes()).padStart(2, 0)
+			document.getElementById("secondeventend").innerHTML = secondEventEnd.getHours() + ":" + String(secondEventEnd.getMinutes()).padStart(2, 0)
 			
 			// set iframe source on events
 			if( now >= firstEventStart && now < firstEventEnd ) {
