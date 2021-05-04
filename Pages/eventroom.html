@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+    <head>
+		<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+		<meta http-equiv="Pragma" content="no-cache">
+		<meta http-equiv="Expires" content="0">
+		<style>
+			body { margin: 0; }
+			iframe { position: absolute; height: 100%; border: none; }
+			#waiting { background-color: #f00; color: #fff; text-align: center; font-size: 30px; }
+		</style>
+    </head>
+    <body>
+		<div id="waiting">
+			<p>10 - 12 Uhr: First Event</p>
+			<p>20 - 22 Uhr: Second Event</p>
+		</div>
+		<iframe id="video" style="display: none;" width="100%" height="100%" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		<script>
+			// get elements
+			var iframe = document.getElementById("video");
+			var waiting = document.getElementById("waiting");
+			
+			// set times
+			var now = new Date();
+			var firstEventStart = new Date("05/04/2021 06:15:00 GMT+02");
+			var firstEventEnd = new Date("05/04/2021 06:16:00 GMT+02");
+			var secondEventStart = new Date("05/04/2021 06:17:00 GMT+02");
+			var secondEventEnd = new Date("05/04/2021 06:18:00 GMT+02");
+			
+			// set iframe source on events
+			if( now >= firstEventStart && now < firstEventEnd ) {
+				waiting.style.display = "none";
+				iframe.style.display = "block";
+				iframe.setAttribute("src", "https://www.youtube.com/embed/C4uJJnYAl94");
+			}
+			if( now >= secondEventStart && now < secondEventEnd ) {
+				waiting.style.display = "none";
+				iframe.style.display = "block";
+				iframe.setAttribute("src", "https://www.youtube.com/embed/UZt641rgLAg");
+			}
+		</script>
+    </body>
+</html>
