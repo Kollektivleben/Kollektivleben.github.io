@@ -181,7 +181,7 @@
                 {
                  "name":"playAudio",
                  "type":"string",
-                 "value":"Sounds\/bjoern1.mp3"
+                 "value":"Sounds\/Bjoern1.mp3"
                 }],
          "type":"tilelayer",
          "visible":true,
