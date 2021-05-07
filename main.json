@@ -247,7 +247,7 @@
                 {
                  "name":"openWebsite",
                  "type":"string",
-                 "value":"Pages\/podcast1.html"
+                 "value":"Pages\/Podcast1.html"
                 }],
          "type":"tilelayer",
          "visible":true,
