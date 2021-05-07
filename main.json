@@ -181,7 +181,12 @@
                 {
                  "name":"openWebsite",
                  "type":"string",
-                 "value":""
+                 "value":"Pages\/architektur1.html"
+                }, 
+                {
+                 "name":"playAudio",
+                 "type":"string",
+                 "value":"Sounds\/bjoern1.mp3"
                 }],
          "type":"tilelayer",
          "visible":true,
