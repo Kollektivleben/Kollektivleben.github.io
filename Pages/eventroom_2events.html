@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+    <head>
+		<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+		<meta http-equiv="Pragma" content="no-cache">
+		<meta http-equiv="Expires" content="0">
+		<link rel="stylesheet" href="https://kolle-frankfurt.de/wp-content/themes/accesspress-parallax/style.css?ver=5.7.1">
+		<style>
+			body { margin: 0; }
+			iframe { position: absolute; height: 100%; border: none; }
+		</style>
+    </head>
+    <body>
+		<div id="waiting">
+			<div style="text-align: right"><img width="100%" src="https://kolle-frankfurt.de/wp-content/uploads/2019/10/cropped-header2-3.png" alt="Kolle – Wohnprojekt Kollektiv Leben"></div>
+			<hr>
+			<h1 align="middle">
+			Live-Event
+			</h1>
+			<hr>
+			<p>
+				First Event: <span id="firsteventstart"></span> - <span id="firsteventend"></span>
+			</p>
+			<p>
+				Second Event: <span id="secondeventstart"></span> - <span id="secondeventend"></span>
+			</p>
+		</div>
+		<iframe id="video" style="display: none;" width="100%" height="100%" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		<script>
+			// get elements
+			var iframe = document.getElementById("video");
+			var waiting = document.getElementById("waiting");
+			var firstEvent = document.getElementById("firstevent");
+			var secondEvent = document.getElementById("secondevent");
+			
+			// set times
+			var now = new Date();
+			var firstEventStart = new Date("05/08/2021 16:00:00 GMT+02");
+			var firstEventEnd = new Date("05/08/2021 18:00:00 GMT+02");
+			var secondEventStart = new Date("05/08/2021 18:10:00 GMT+02");
+			var secondEventEnd = new Date("05/08/2021 18:15:00 GMT+02");
+			
+			// set waiting text
+			document.getElementById("firsteventstart").innerHTML = firstEventStart.getHours() + ":" + String(firstEventStart.getMinutes()).padStart(2, 0)
+			document.getElementById("firsteventend").innerHTML = firstEventEnd.getHours() + ":" + String(firstEventEnd.getMinutes()).padStart(2, 0)
+			document.getElementById("secondeventstart").innerHTML = secondEventStart.getHours() + ":" + String(secondEventStart.getMinutes()).padStart(2, 0)
+			document.getElementById("secondeventend").innerHTML = secondEventEnd.getHours() + ":" + String(secondEventEnd.getMinutes()).padStart(2, 0)
+			
+			// set iframe source on events
+			if( now >= firstEventStart && now < firstEventEnd ) {
+				waiting.style.display = "none";
+				iframe.style.display = "block";
+				iframe.setAttribute("src", "https://www.youtube.com/embed/C4uJJnYAl94");
+			}
+			if( now >= secondEventStart && now < secondEventEnd ) {
+				waiting.style.display = "none";
+				iframe.style.display = "block";
+				iframe.setAttribute("src", "https://www.youtube.com/embed/UZt641rgLAg");
+			}
+		</script>
+    </body>
+</html>
