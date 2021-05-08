@@ -90,7 +90,7 @@
                 {
                  "name":"exitSceneUrl",
                  "type":"string",
-                 "value":"ersterstock.json#startlayer2"
+                 "value":"main.json#startlayer2"
                 }],
          "type":"tilelayer",
          "visible":true,
