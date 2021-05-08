@@ -412,7 +412,7 @@
          "opacity":1,
          "properties":[
                 {
-                 "name":"openWesbite",
+                 "name":"openWebsite",
                  "type":"string",
                  "value":"Pages\/wohnraumpolitik2.html"
                 }],
