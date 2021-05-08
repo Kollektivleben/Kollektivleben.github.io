@@ -37,7 +37,7 @@
                 {
                  "name":"exitUrl",
                  "type":"string",
-                 "value":"https:\/\/play.workadventu.re\/@\/kollektivleben\/unserhaus\/ersterstock.json#startlayer1"
+                 "value":"https:\/\/play.workadventu.re\/@\/kollektivleben\/unserhaus\/ersterstock#startlayer1"
                 }],
          "type":"tilelayer",
          "visible":true,
@@ -55,7 +55,7 @@
                 {
                  "name":"exitUrl",
                  "type":"string",
-                 "value":"https:\/\/play.workadventu.re\/@\/kollektivleben\/unserhaus\/ersterstock.json#startlayer2"
+                 "value":"https:\/\/play.workadventu.re\/@\/kollektivleben\/unserhaus\/ersterstock#startlayer2"
                 }],
          "type":"tilelayer",
          "visible":true,
