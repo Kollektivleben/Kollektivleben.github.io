@@ -144,7 +144,7 @@
                 {
                  "name":"playAudio",
                  "type":"string",
-                 "value":"waschbecken.mp3"
+                 "value":"Sounds\/waschbecken.mp3"
                 }],
          "type":"tilelayer",
          "visible":true,
