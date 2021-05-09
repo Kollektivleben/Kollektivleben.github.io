@@ -360,7 +360,7 @@
                 {
                  "name":"openWebsite",
                  "type":"string",
-                 "value":"https:\/\/www.degruyter.com\/document\/doi\/10.1515\/9783035618709\/html"
+                 "value":"https:\/\/doi.org\/10.1515\/9783035618709"
                 }],
          "type":"tilelayer",
          "visible":true,
@@ -378,7 +378,7 @@
                 {
                  "name":"openWebsite",
                  "type":"string",
-                 "value":"http:\/\/ernst-may-gesellschaft.de\/home.html"
+                 "value":"https:\/\/ernst-may-gesellschaft.de\/home.html"
                 }],
          "type":"tilelayer",
          "visible":true,
